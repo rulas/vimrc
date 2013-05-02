@@ -1,13 +1,3 @@
-" Sample .vimrc file by Martin Brochhaus
-" Presented at PyCon APAC 2012
-
-
-" ============================================
-" Note to myself:
-" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
-" ============================================
-
-
 " Automatic reloading of .vimrc
 " autocmd! bufwritepost _vimrc source %
 
@@ -18,17 +8,14 @@
 " set pastetoggle=<F2>
 " set clipboard=unnamed
 
-
 " Mouse and backspace
 " set mouse=a  " on OSX press ALT and click
 " set bs=2     " make backspace behave like normal again
-
 
 " Rebind <Leader> key
 " I like to have it here becuase it is easier to reach than the default and
 " it is next to ``m`` and ``n`` which I use for navigating between tabs.
 " let mapleader = ","
-
 
 " Bind nohl
 " Removes highlight of your last search
@@ -37,17 +24,17 @@
 " vnoremap <C-n> :nohl<CR>
 " inoremap <C-n> :nohl<CR>
 
-
 " Quicksave command
 " noremap <C-Z> :update<CR>
 " vnoremap <C-Z> <C-C>:update<CR>
 " inoremap <C-Z> <C-O>:update<CR>
 
-
 " Quick quit command
 " noremap <Leader>e :quit<CR>  " Quit current window
 " noremap <Leader>E :qa!<CR>   " Quit all windows
 
+" Set current path to same than current opened file
+" nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -85,7 +72,7 @@
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 " set t_Co=256
-" color pablo
+" color slate
 
 
 " Enable syntax highlighting
@@ -147,11 +134,11 @@
 " ============================================================================
 " Python IDE Setup
 " ============================================================================
+
 " Settings for vim-powerline
 " cd ~/.vim/bundle
 " git clone git://github.com/Lokaltog/vim-powerline.git
 " set laststatus=2
-
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
@@ -160,7 +147,6 @@
 " set wildignore+=*.pyc
 " set wildignore+=*_build/*
 " set wildignore+=*/coverage/*
-
 
 " Settings for python-mode
 " cd ~/.vim/bundle
@@ -192,12 +178,10 @@
 " inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 " inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
-
 " Python folding
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 " set nofoldenable
-
 
 " SnipMate (code snippets)
 " git clone git://github.com/msanders/snipmate.vim.git
@@ -207,3 +191,11 @@
 " NERDtree
 " cd ~/.vim/bundle
 " git clone https://github.com/scrooloose/nerdtree.git
+
+" NerdCommenter
+" cd ~/.vim/bundle
+" git clone https://github.com/scrooloose/nerdcommenter.git
+
+" taglist
+" a source code browser for vim
+" download from http://vim-taglist.sourceforge.net/
